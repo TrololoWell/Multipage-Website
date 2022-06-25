@@ -12,5 +12,12 @@ const faqs = document.querySelectorAll('.faq');
 faqs.forEach(faq => {
    faq.addEventListener('click', () => {
       faq.classList.toggle('open');
+
+   //   const icon = querySelector('.faq_icon svg');
+   //   if(icon.className === 'plus'){
+   //    icon.className = 'minus'
+   //   } else{
+   //    icon.className = 'plus';
+   //   }
    })
 })

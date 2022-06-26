@@ -23,7 +23,7 @@
 
    --container-width-lg: 80%;
    --container-width-md: 90%;
-   --container-width-sm: 95%;
+   --container-width-sm: 94%;
 
    --transition: all 400ms ease;
 }
@@ -162,7 +162,7 @@ header{
 }
 
 .header_container{
-   display: flex;
+   display: grid;
    grid-template-columns: 1fr 1fr;
    align-items: center;
    gap: 5rem;
@@ -177,7 +177,7 @@ header{
 .categories{
    background: var(--color-bg1);
    height: 35rem;
-   padding: 5rem;
+   padding-top: 3rem;
 }
 
 .categories h1{
@@ -228,17 +228,13 @@ header{
 }
 
 .category_icon{
+   display: inline-block;
    background: var(--color-primary);
    padding: 0.7rem;
    border-radius: 0.9rem;
    
 }
 
-.category_icon svg{
-   margin: 0 auto;
-   text-align: center;
-   align-items:center ;
-}
 .category h5{
    margin: 2rem 0 1rem;
 }
@@ -418,7 +414,7 @@ header{
    border-top:1px solid var(--color-bg2);
 }
 
-/* Адаптив */
+/* Адаптив 1024 */
 @media screen  and (max-width:1024px){
    
    .container{
@@ -508,7 +504,7 @@ header{
       color: var(--color-white);
    }
 
-   header{
+   .header{
       height: 52vh;
       margin-bottom: 4rem;
    }
@@ -529,5 +525,87 @@ header{
 
    .categories_left{
       margin-right: 0;
+   }
+
+   .courses{
+      margin-top: 0;
+   }
+   
+   .courses_container{
+      grid-template-columns: 1fr 1fr;
+   }
+
+   .faqs_container{
+      grid-template-columns: 1fr;
+   }
+
+   .faq{
+      padding: 1.5rem;
+   }
+
+   .footer_container{
+      grid-template-columns: 1fr 1fr;
+   }
+}
+
+/* Адаптив 600 */
+
+@media screen and (max-width:600px) {
+   .container{
+      width: var(--container-width-sm);
+   }
+
+   .nav_menu{
+      right: 3%;
+   }
+   
+   header{
+   height: 100vh;   
+   }
+   .header_container{
+      grid-template-columns: 1fr;
+      text-align: center;
+      margin-top: 0;
+   }
+
+   .header_left P{
+      margin-bottom: 1.3rem;
+   }
+
+   .categories_right{
+      grid-template-columns: 1fr 1fr;
+      gap: 0.7rem;
+   }
+
+   .category{
+      padding: 1rem;
+      border: 1rem;
+   }
+
+   .category_icon{
+      margin-top: 4px;
+      display: inline-block;
+   }
+
+   .courses_container{
+      grid-template-columns: 1fr;
+   }
+
+   .test_body{
+      padding: 1.2rem;
+   }
+
+   .footer_container{
+      grid-template-columns: 1fr;
+      text-align: center;
+      gap: 2rem;
+   }
+
+   .footer_1{
+      margin: 1rem auto;
+   }
+
+   .footer_socials{
+      justify-content: center;
    }
 }

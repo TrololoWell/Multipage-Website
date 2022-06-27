@@ -42,7 +42,7 @@ body{
    margin: 0 auto;
 }
 
-.section{
+section{
  padding: 6rem ;
  margin: 4rem;
 }
@@ -416,6 +416,10 @@ header{
 
 /* Адаптив 1024 */
 @media screen  and (max-width:1024px){
+   section{
+      padding: 1rem ;
+      margin: 1rem;
+     }
    
    .container{
       width: var(--container-width-md);
